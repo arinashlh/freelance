@@ -452,7 +452,7 @@ const translations = {
         },
         {
           title: "Lifelong Learner",
-          desc: "I believe growth comes from curiosity, practice, and the willingness to keep learning.",
+          desc: "Saya percaya pertumbuhan berasal dari rasa ingin tahu, latihan, dan kemauan untuk terus belajar.",
           experience: "Terus mengembangkan keahlian di bidang teknologi, pendidikan, dan inovasi digital.",
           icon: <UsersIcon size={28} strokeWidth={1.5} />
         }
@@ -718,7 +718,7 @@ const translations = {
           desc: "Memahami konsep fundamental Kecerdasan Buatan (AI), etika penggunaan AI, serta keterampilan hidup esensial untuk beradaptasi di era digital."
         },
         {
-          title: "Akademi Digital Marketing - NFTs Computer",
+          title: "Akademi Digital Marketing - NF Computer",
           desc: "Menguasai strategi pemasaran digital praktis termasuk dasar-dasar SEO, manajemen media sosial, pelaksanaan kampanye, dan perencanaan konten."
         }
       ]
@@ -817,7 +817,6 @@ const App = () => {
 
   const scrollCarousel = (direction) => {
     if (sliderRef.current) {
-      // Menggunakan lebar container agar perpindahan card tepat per halaman / item
       const containerWidth = sliderRef.current.clientWidth;
       const scrollAmount = direction === 'left' ? -containerWidth / 3 : containerWidth / 3;
       sliderRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
@@ -924,7 +923,7 @@ const App = () => {
             <button onClick={() => scrollTo('projects')} className="bg-[#a3e635] text-[#171923] px-6 py-3 rounded-full font-semibold flex items-center space-x-2 hover:bg-[#84cc16] hover:scale-105 transition-all">
               <span>{t.hero.exploreBtn}</span><ArrowRight className="w-4 h-4"/>
             </button>
-            <a href="/Arina-Sholiha-CV.pdf" download="Arina_Sholiha_CV.pdf" target="_blank" rel="noopener noreferrer" className={`flex items-center space-x-2 px-6 py-3 rounded-full font-medium border ${isDark ? 'border-[#30363B] hover:bg-[#1A1E21]' : 'border-[#E3E5DE] hover:bg-white'} hover:scale-105 transition-all`}>
+            <a href="/CV-ATS-Arina-Sholiha.pdf" download="CV-ATS-Arina-Sholiha.pdf" target="_blank" rel="noopener noreferrer" className={`flex items-center space-x-2 px-6 py-3 rounded-full font-medium border ${isDark ? 'border-[#30363B] hover:bg-[#1A1E21]' : 'border-[#E3E5DE] hover:bg-white'} hover:scale-105 transition-all`}>
               <span>{t.hero.downloadCv}</span><Download className="w-4 h-4"/>
             </a>
           </div>
@@ -1058,7 +1057,7 @@ const App = () => {
         </div>
       </section>
 
-      {/* 04. FEATURED PROJECTS - REVISED HORIZONTAL CAROUSEL */}
+      {/* FEATURED PROJECTS */}
       <section id="projects" className="py-20 px-6 max-w-6xl mx-auto text-left relative">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 gap-4">
           <div>
@@ -1067,7 +1066,6 @@ const App = () => {
             <p className={`text-sm md:text-base font-normal ${secondaryText}`}>{t.projects.subtext}</p>
           </div>
 
-          {/* Carousel controls & Counter */}
           <div className="flex items-center space-x-4">
             <span className={`text-sm font-mono font-bold px-3 py-1 rounded-full border ${isDark ? 'border-[#30363B] bg-[#1A1E21]' : 'border-[#E3E5DE] bg-white'}`}>
               {currentIndex + 1} / {t.projects.items.length}
@@ -1091,7 +1089,6 @@ const App = () => {
           </div>
         </div>
 
-        {/* Horizontal Carousel Container dengan Snap Presisi per Card */}
         <div 
           ref={sliderRef}
           onScroll={handleScrollEvent}
@@ -1107,7 +1104,6 @@ const App = () => {
               className={`project-card flex-shrink-0 w-[85vw] sm:w-[calc(33.333%-16px)] rounded-3xl border overflow-hidden flex flex-col snap-start ${cardTheme} hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 group`}
               style={{ scrollSnapAlign: 'start' }}
             >
-              {/* Project Image dengan Zoom In Halus & Jeda Saat Kursor Berhenti di Card (Hover) */}
               <div 
                 className="aspect-[16/10] w-full overflow-hidden bg-gray-200 dark:bg-gray-800 relative cursor-pointer"
                 onClick={() => setLightboxImg(proj.img)}
@@ -1126,7 +1122,6 @@ const App = () => {
                 </span>
               </div>
 
-              {/* Card Content */}
               <div className="p-6 flex flex-col flex-grow">
                 <p className="text-[11px] font-bold tracking-widest text-[#a3e635] dark:text-[#B8F36B] uppercase mb-1.5">{proj.category}</p>
                 <h3 className="text-xl font-bold mb-2.5 font-serif-custom">{proj.title}</h3>
@@ -1199,7 +1194,7 @@ const App = () => {
         </div>
       )}
 
-      {/* HOW I TEACH (TEACHING APPROACH) */}
+      {/* HOW I TEACH */}
       <section id="teaching" className="py-20 px-6 max-w-6xl mx-auto text-left">
         <p className={`text-xs font-bold tracking-widest uppercase mb-4 ${secondaryText}`}>{t.teaching.section}</p>
         <h2 className="text-4xl md:text-5xl font-bold font-serif-custom mb-4">{t.teaching.heading}</h2>
@@ -1312,7 +1307,7 @@ const App = () => {
               <a href="https://wa.me/qr/BCLY7Q4KBBMUN1" target="_blank" rel="noreferrer" className="bg-[#a3e635] text-[#171923] px-6 py-3 rounded-full font-bold flex items-center justify-center space-x-2 hover:bg-[#84cc16] hover:scale-105 transition-all w-fit">
                 <span>{t.contact.btnPrimary}</span><ArrowRight className="w-4 h-4"/>
               </a>
-              <a href="/Arina-Sholiha-CV.pdf" download="Arina_Sholiha_CV.pdf" target="_blank" rel="noopener noreferrer" className={`px-6 py-3 rounded-full font-bold border flex items-center justify-center space-x-2 hover:scale-105 transition-all w-fit ${isDark ? 'border-[#30363B] hover:bg-[#111315]' : 'border-gray-300 hover:bg-white'}`}>
+              <a href="/CV-ATS-Arina-Sholiha.pdf" download="CV-ATS-Arina-Sholiha.pdf" target="_blank" rel="noopener noreferrer" className={`px-6 py-3 rounded-full font-bold border flex items-center justify-center space-x-2 hover:scale-105 transition-all w-fit ${isDark ? 'border-[#30363B] hover:bg-[#111315]' : 'border-gray-300 hover:bg-white'}`}>
                 <span>{t.contact.btnSecondary}</span><Download className="w-4 h-4"/>
               </a>
             </div>
@@ -1382,7 +1377,7 @@ const App = () => {
             
             <div className="flex items-center space-x-5">
               <a href="https://github.com/arinashlh" target="_blank" rel="noreferrer" className={`hover:text-[#a3e635] hover:-translate-y-1 transition-all ${secondaryText}`}><GithubIcon className="w-5 h-5"/></a>
-              <a href="https://www.linkedin.com/in/arina-sholiha" targetUREF target="_blank" rel="noreferrer" className={`hover:text-[#a3e635] hover:-translate-y-1 transition-all ${secondaryText}`}><LinkedinIcon className="w-5 h-5"/></a>
+              <a href="https://www.linkedin.com/in/arina-sholiha" target="_blank" rel="noreferrer" className={`hover:text-[#a3e635] hover:-translate-y-1 transition-all ${secondaryText}`}><LinkedinIcon className="w-5 h-5"/></a>
               <a href="https://youtube.com/" target="_blank" rel="noreferrer" className={`hover:text-[#a3e635] hover:-translate-y-1 transition-all ${secondaryText}`}><YoutubeIcon className="w-5 h-5"/></a>
               <a href="https://wa.me/qr/BCLY7Q4KBBMUN1" target="_blank" rel="noreferrer" className={`hover:text-[#a3e635] hover:-translate-y-1 transition-all ${secondaryText}`}><Mail className="w-5 h-5"/></a>
             </div>
